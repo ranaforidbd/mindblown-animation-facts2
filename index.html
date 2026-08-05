@@ -1,140 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MindBlown Animation Facts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBlown Animation Facts</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
-
-header{
-background:linear-gradient(135deg,#2563eb,#9333ea);
-padding:70px 20px;
-text-align:center;
-}
-
-header h1{
-font-size:55px;
-margin-bottom:15px;
-}
-
-header p{
-font-size:22px;
-color:#ddd;
-}
-
-.search{
-text-align:center;
-margin:40px;
-}
-
-.search input{
-width:320px;
-max-width:90%;
-padding:15px;
-border:none;
-border-radius:30px;
-font-size:18px;
-}
-
-.container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-padding:40px;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-transition:.3s;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card h2{
-color:#60a5fa;
-margin-bottom:15px;
-}
-
-.card p{
-line-height:1.7;
-color:#ddd;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-margin-top:50px;
-color:#aaa;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h1>🎬 MindBlown Animation Facts</h1>
-<p>Discover Amazing Facts About Animation & Cartoons</p>
+<nav class="navbar">
+    <div class="logo">🎬 MindBlown</div>
+
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Facts</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+
+<h1>MindBlown Animation Facts</h1>
+
+<p>
+Discover Amazing Facts About Disney, Pixar, Anime,
+Cartoons and Animated Movies.
+</p>
+
+<input
+type="text"
+placeholder="Search animation facts..."
+class="search">
+
 </header>
 
-<div class="search">
-<input type="text" placeholder="Search animation facts...">
+<section class="categories">
+
+<h2>Categories</h2>
+
+<div class="buttons">
+
+<button>Disney</button>
+
+<button>Pixar</button>
+
+<button>Anime</button>
+
+<button>Cartoon</button>
+
+<button>DreamWorks</button>
+
 </div>
 
-<div class="container">
+</section>
 
-<div class="card">
-<h2>🐭 Mickey Mouse</h2>
-<p>Mickey Mouse first appeared in 1928 in the famous cartoon Steamboat Willie.</p>
-</div>
+<section class="featured">
 
-<div class="card">
-<h2>🧽 SpongeBob</h2>
-<p>SpongeBob originally worked because its creator was a marine biology teacher.</p>
-</div>
+<h2>Featured Facts</h2>
 
-<div class="card">
-<h2>🦁 The Lion King</h2>
-<p>The Lion King was the first Disney animated movie with an original story.</p>
-</div>
-
-<div class="card">
-<h2>❄ Frozen</h2>
-<p>"Let It Go" became one of the most streamed Disney songs ever.</p>
-</div>
-
-<div class="card">
-<h2>🎥 Pixar</h2>
-<p>Toy Story was the world's first completely computer-animated feature film.</p>
-</div>
+<div class="cards">
 
 <div class="card">
-<h2>🐼 Kung Fu Panda</h2>
-<p>More than 20 animators worked only on Po's facial expressions.</p>
+<h3>Mickey Mouse</h3>
+<p>The world's most famous cartoon character debuted in 1928.</p>
+</div>
+
+<div class="card">
+<h3>Frozen</h3>
+<p>Let It Go became one of Disney's biggest songs.</p>
+</div>
+
+<div class="card">
+<h3>Toy Story</h3>
+<p>The first fully computer animated feature film.</p>
 </div>
 
 </div>
+
+</section>
+
+<section class="about">
+
+<h2>About This Website</h2>
+
+<p>
+MindBlown Animation Facts shares fun, interesting,
+and educational facts about animation from around the world.
+</p>
+
+</section>
 
 <footer>
-© 2026 MindBlown Animation Facts | Created by Rana
+
+<p>
+
+© 2026 MindBlown Animation Facts
+
+</p>
+
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
