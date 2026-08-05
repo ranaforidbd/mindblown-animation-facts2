@@ -1,91 +1,65 @@
-// ===== Search Feature =====
-const searchBox = document.querySelector(".search");
-const cards = document.querySelectorAll(".card");
+const facts = [
+{
+title:"🐭 Mickey Mouse",
+category:"Disney",
+image:"https://picsum.photos/400/250?random=1",
+text:"Mickey Mouse first appeared in 1928 in Steamboat Willie."
+},
 
-if (searchBox) {
-  searchBox.addEventListener("keyup", function () {
-    const value = this.value.toLowerCase();
+{
+title:"❄ Frozen",
+category:"Disney",
+image:"https://picsum.photos/400/250?random=2",
+text:"Frozen became one of Disney's biggest animated movies."
+},
 
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
+{
+title:"🎥 Toy Story",
+category:"Pixar",
+image:"https://picsum.photos/400/250?random=3",
+text:"Toy Story was the world's first fully computer animated movie."
+},
 
-      if (text.includes(value)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  });
+{
+title:"🧽 SpongeBob",
+category:"Cartoon",
+image:"https://picsum.photos/400/250?random=4",
+text:"The creator of SpongeBob was a marine biology teacher."
+},
+
+{
+title:"🐼 Kung Fu Panda",
+category:"DreamWorks",
+image:"https://picsum.photos/400/250?random=5",
+text:"Po's facial expressions required many animators."
+},
+
+{
+title:"⚡ Naruto",
+category:"Anime",
+image:"https://picsum.photos/400/250?random=6",
+text:"Naruto has over 700 manga chapters."
 }
+];
 
-// ===== Category Buttons =====
-const buttons = document.querySelectorAll(".buttons button");
+const container=document.getElementById("factsContainer");
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
+facts.forEach(fact=>{
 
-    const category = button.innerText.toLowerCase();
+container.innerHTML+=`
 
-    cards.forEach(card => {
+<div class="card">
 
-      const text = card.innerText.toLowerCase();
+<img src="${fact.image}" width="100%">
 
-      if (category === "all") {
-        card.style.display = "block";
-      }
-      else if (text.includes(category)) {
-        card.style.display = "block";
-      }
-      else {
-        card.style.display = "none";
-      }
+<h3>${fact.title}</h3>
 
-    });
+<p>${fact.text}</p>
 
-  });
+<small>${fact.category}</small>
+
+</div>
+
+`;
+
 });
-
-// ===== Dark / Light Mode =====
-const nav = document.querySelector(".navbar");
-
-const modeButton = document.createElement("button");
-modeButton.innerText = "🌙";
-modeButton.style.padding = "10px";
-modeButton.style.borderRadius = "10px";
-modeButton.style.border = "none";
-modeButton.style.cursor = "pointer";
-
-nav.appendChild(modeButton);
-
-let dark = true;
-
-modeButton.onclick = () => {
-
-  if (dark) {
-
-    document.body.style.background = "#ffffff";
-    document.body.style.color = "#000000";
-
-    document.querySelectorAll(".card").forEach(card => {
-      card.style.background = "#eeeeee";
-      card.style.color = "#000";
-    });
-
-    modeButton.innerText = "☀️";
-
-  } else {
-
-    document.body.style.background = "#0f172a";
-    document.body.style.color = "#ffffff";
-
-    document.querySelectorAll(".card").forEach(card => {
-      card.style.background = "#1e293b";
-      card.style.color = "#fff";
-    });
-
-    modeButton.innerText = "🌙";
-  }
-
-  dark = !dark;
-
-};
