@@ -34,3 +34,38 @@ image:"https://picsum.photos/400/250?random=5",
 text:"The Lion King was inspired by Shakespeare's Hamlet."
 }
 ];
+const factsContainer = document.getElementById("factsContainer");
+const searchInput = document.getElementById("search");
+
+function displayFacts(list) {
+    factsContainer.innerHTML = "";
+
+    list.forEach(fact => {
+        factsContainer.innerHTML += `
+            <div class="card">
+                <img src="${fact.image}" alt="${fact.title}">
+                <div class="card-content">
+                    <span class="category">${fact.category}</span>
+                    <h2>${fact.title}</h2>
+                    <p>${fact.text}</p>
+                </div>
+            </div>
+        `;
+    });
+}// Search functionality
+if (searchInput) {
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase();
+
+        const filtered = facts.filter(fact =>
+            fact.title.toLowerCase().includes(keyword) ||
+            fact.text.toLowerCase().includes(keyword) ||
+            fact.category.toLowerCase().includes(keyword)
+        );
+
+        displayFacts(filtered);
+    });
+}
+
+// Show all facts when page loads
+displayFacts(facts);
