@@ -1,10 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MindBlown Animation Facts</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+background:linear-gradient(135deg,#2563eb,#9333ea);
+padding:70px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+header p{
+font-size:22px;
+color:#ddd;
+}
+
+.search{
+text-align:center;
+margin:40px;
+}
+
+.search input{
+width:320px;
+max-width:90%;
+padding:15px;
+border:none;
+border-radius:30px;
+font-size:18px;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding:40px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h2{
+color:#60a5fa;
+margin-bottom:15px;
+}
+
+.card p{
+line-height:1.7;
+color:#ddd;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+margin-top:50px;
+color:#aaa;
+}
+</style>
+
 </head>
 <body>
-<h1>Welcome to MindBlown Animation Facts!</h1>
-<p>This is my first website.</p>
+
+<header>
+<h1>🎬 MindBlown Animation Facts</h1>
+<p>Discover Amazing Facts About Animation & Cartoons</p>
+</header>
+
+<div class="search">
+<input type="text" placeholder="Search animation facts...">
+</div>
+
+<div class="container">
+
+<div class="card">
+<h2>🐭 Mickey Mouse</h2>
+<p>Mickey Mouse first appeared in 1928 in the famous cartoon Steamboat Willie.</p>
+</div>
+
+<div class="card">
+<h2>🧽 SpongeBob</h2>
+<p>SpongeBob originally worked because its creator was a marine biology teacher.</p>
+</div>
+
+<div class="card">
+<h2>🦁 The Lion King</h2>
+<p>The Lion King was the first Disney animated movie with an original story.</p>
+</div>
+
+<div class="card">
+<h2>❄ Frozen</h2>
+<p>"Let It Go" became one of the most streamed Disney songs ever.</p>
+</div>
+
+<div class="card">
+<h2>🎥 Pixar</h2>
+<p>Toy Story was the world's first completely computer-animated feature film.</p>
+</div>
+
+<div class="card">
+<h2>🐼 Kung Fu Panda</h2>
+<p>More than 20 animators worked only on Po's facial expressions.</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 MindBlown Animation Facts | Created by Rana
+</footer>
+
 </body>
 </html>
